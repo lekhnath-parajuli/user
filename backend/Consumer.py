@@ -14,5 +14,5 @@ class Consumer:
         async with connection:
             channel = await connection.channel()
             queue = await channel.declare_queue(self.service)
-            await queue.consume(callback=callback)
+            await queue.consume(callback=callback, no_ack=True)
             await asyncio.Future()
