@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "user"
+version = "0.1.0"
+description = ""
+authors = ["Lekhnath Parajuli <lekhnathparajuli4@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aio-pika = "^8.1.1"
+pydantic = "^1.9.2"
+SQLAlchemy = "^1.4.40"
+SQLAlchemy-Utils = "^0.38.3"
+psycopg2 = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
