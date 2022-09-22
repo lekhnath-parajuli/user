@@ -21,6 +21,6 @@ class UserController:
             session.add(user)
             session.commit()
             session.refresh(user)
-        return user.uid
+            return user.uid
 
 

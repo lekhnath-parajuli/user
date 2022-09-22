@@ -8,14 +8,15 @@ from controller import UserController
 
 async def register(message: AbstractIncomingMessage) -> None:
     user = json.loads(message.body)
+    print(user)
+    user.pop('service', None)
     controller = UserController()
-    uid = await controller.register(
+    user['uid'] = await controller.register(
             firstname=user['firstname'], 
             lastname=user['lastname'])
-    user.pop('service', None)
-    user['uid'] = uid
     await Producer(service='register-out'
         ).send(message=json.dumps(user).encode('UTF-8'))
+    print('this is also done !')
 
 
 async def listen() -> None:

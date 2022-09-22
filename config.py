@@ -15,7 +15,7 @@ class Config(BaseSettings):
     DATABASE_URL: str = f'{DBConfig.DATABASE}://{DBConfig.USER}:{DBConfig.PASSWORD}@{DBConfig.HOST}/{DBConfig.NAME}'
     RABBITMQ_SERVER: str = 'amqp://guest:guest@localhost/'
     ALLOWED_TOPICS: list = [
-        'user'
+        'register'
     ]
 
 
